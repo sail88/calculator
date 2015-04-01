@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculator</title>
+</head>
+<body>
+	<h1>Welcome to my online calculator</h1>
+	<form action="/add" method="POST">
+		<h3>Add!</h3>
+		<input type="text" name="add1" placeholder="1st number to add">
+		<input type="text" name="add2" placeholder="2nd number to add">
+
+	<% if (resultsOut.solved && resultsOut.operation=="add") {%> <b> <%=resultsOut.answer%></b> <%}%>
+
+		<p>Enter numbers then click submit!</p>
+		<input type="submit">
+		
+	</form><br>
+
+	<h3>Subtract!</h3><br>
+	<form action="/subtract" method="POST">
+		<input type="text" name="subtract1" placeholder="1st number to subtract">
+		<input type="text" name="subtract2" placeholder="2nd number to subtract">
+
+		<% if (resultsOut.solved && resultsOut.operation=="subtract") {%> <b> <%=resultsOut.answer%></b> <%}%>
+
+		<p>Enter numbers then click submit!</p>
+		<input type="submit">
+	</form><br>
+
+	<h3>Multiply!</h3><br>
+	<form action="/multiply" method="POST">
+		<input type="text" name="multiply1" placeholder="1st number to multiply">
+		<input type="text" name="multiply2" placeholder="2nd number to multiply">
+
+		<% if (resultsOut.solved && resultsOut.operation=="multiply") {%> <b> <%=resultsOut.answer%></b> <%}%>
+
+		<p>Enter numbers then click submit!</p>
+		<input type="submit">
+	</form><br>
+
+	<h3>Divide!</h3><br>
+	<form action="/divide" method="POST">
+		<input type="text" name="divide1" placeholder="1st number to divide">
+		<input type="text" name="divide2" placeholder="2nd number to divide">
+
+		<% if (resultsOut.solved && resultsOut.operation=="divide") {%> <b> <%=resultsOut.answer%></b> <%}%>
+
+		<p>Enter numbers then click submit!</p><br>
+		<input type="submit">
+	</form>
+</body>
+</html>
